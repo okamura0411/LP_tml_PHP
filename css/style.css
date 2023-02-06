@@ -1,0 +1,369 @@
+@charset "UTF-8";
+@import url("grid.css");
+
+:root { /* 色変更される場合は、#以降のカラーコードを変更してください IE非対応 */
+    --base-color: #000;
+    --link-color: #666;
+    --linkhover-color: #999;
+    --back-color: #f7f7f7;
+    --border-color: #ccc;
+    --white-color: #fff;
+}
+
+img {
+	max-width:100%;
+	height: auto;/*高さ自動*/
+}
+a {
+    display:block;
+    color: var(--link-color);
+    text-decoration-line: none;
+}
+a:hover { 
+    color: var(--linkhover-color);
+}
+
+/*ヘッダー
+-------------------------------------*/
+.header {
+	display: flex;
+    flex-direction: row;
+    padding: 2rem 0 0 0;
+}
+.header-box {
+	margin-left: auto;
+	margin-top: 10px;
+    margin-right:60px;
+}
+.contact-button {
+	padding: 1rem;
+	border: 2px solid var(--base-color);
+}
+nav ul {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+	margin: 1rem 0 0 0;
+}
+nav li {
+	flex: 1 0 auto;
+}
+nav li a {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+nav a:hover {
+    background-color: var(--back-color);   
+}
+nav a {
+    padding: 0.5rem;
+}
+
+@media screen and (min-width: 768px){
+/* PC時はMENUボタンを非表示 */
+#open,#close {
+    display: none !important;
+}
+
+#navi {
+    display: block !important;
+}
+}
+
+@media screen and (max-width: 768px){
+.header {
+	flex-direction: flex;
+    margin-bottom: 10px;
+}
+.header #open,#close  {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+.gmap{
+    flex-direction: column;
+}
+nav ul {
+	flex-direction: column;
+}
+.header li {
+	padding-top: 0;
+}
+
+/* スマホ時はMENUボタンを表示 */
+#open {
+    display: block;
+    background: url(../img/button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+#close  {
+    display: block;
+    background: url(../img/button2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 12px;
+}
+/* スマホ時はメニューを非表示 */
+#navi {
+    display: none;
+}
+
+}
+    
+/*メイン画像
+-------------------------------------*/
+.mainimg video{
+    width: 100%;
+    height: 700px;
+}
+
+/*メインコンテンツ
+-------------------------------------*/
+main {
+    margin: 5rem 0 0 0;
+}
+section {
+	margin: 5rem 0;
+	padding: 3rem 0;
+}
+.gray-back {
+	background-color: var(--back-color);
+}
+
+/*キャッチコピー
+-------------------------------------*/
+.catch {
+    text-align: center;
+}
+.catch h2 {
+    padding-bottom: 1rem;
+}
+.under {
+    border-bottom: 0.4rem solid var(--base-color);
+    padding:0 1rem 1rem 1rem;
+}
+.center {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+/*申し込みの流れ
+-------------------------------------*/
+.flow.row {
+	margin-bottom: 3rem;
+}
+
+/*フッター
+-------------------------------------*/
+footer {
+    background-color: var(--back-color); 
+    padding: 5rem 0;
+}
+footer h4 {
+    border-bottom: 3px solid var(--border-color);
+}
+
+/*お問い合わせ
+-------------------------------------*/
+.contact-box {
+	border: 1px solid var(--border-color);
+	text-align: center;
+	padding: 2rem 0;
+}
+.table {
+	margin: 4rem 0;
+}
+.table th {
+	width: 250px;
+}
+
+/*コピーライト
+-------------------------------------*/
+.copyright {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: var(--base-color);
+}
+.copyright a {
+    color: var(--white-color);
+    text-decoration: none;
+	display: inline;
+}
+
+/*ページトップへ戻るボタン
+-------------------------------------*/
+#pagetop {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+#pagetop a {
+    display: block;
+    background-color: var(--base-color);
+    color: var(--white-color);
+    width: 50px;
+    padding: 10px 5px;
+    text-align: center;
+}
+#pagetop a:hover {
+    background-color: var(--link-color);
+}
+
+/* 幅768px以下の表示
+-------------------------------------*/
+@media screen and (max-width: 768px){
+	
+/*ヘッダー
+-------------------------------------*/
+
+/*お問い合わせ
+-------------------------------------*/
+.table th {
+	width: 100%;
+	display: block;
+}	
+.table td {
+	display: block;
+}
+
+}
+
+/* ログイン画面CSS */
+.login_header{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(152, 152, 152);
+}
+.login_container{
+    margin: 0 auto;
+    margin-top: 30px;
+    text-align: center;
+    width: 60%;
+    max-width: 800px;
+
+}
+.login_container h5{
+    text-align: center;
+    margin-top: 30px;
+}
+.input_container button{
+    margin-top: 30px;
+    height: 50px;
+    background-color: #333;
+    border: 2px solid #333;
+    color: #fff;
+    border-radius: 10px;
+    transition: .3s;
+}
+.input_container button:hover {
+    background-color: #fff;
+    border-color: #59b1eb;
+    color: #59b1eb;
+}
+.login_container p{
+    text-align: start;
+}
+.login_info{
+    width: 100%;
+    border-radius: 10px;
+}
+.login{
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+.admin_login{
+    color: orange;
+    font-size: 40px;
+}
+.logo_l{
+    margin-left: 60px;
+}
+.gmap{
+    display: flex;
+    justify-content: space-between;
+}
+.gmap_info{
+    margin-right: 30px;
+}
+.movie_form{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+.movie_input{
+    width: 100%;
+    padding: 12px
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainimg{
+    text-align: center;
+}
+.mainimg img{
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+}
+.mainimg video{
+    margin: 0 auto;
+    width: 600px;
+    height: 500px;
+}
+@media screen and (max-width: 768px){
+    .mainimg img{
+        margin: 0 auto;
+        width:  300px;
+        height: 200px;
+    }
+    .mainimg video{
+        margin: 0 auto;
+        width:  300px;
+        height: 200px;
+    }
+    .gmapIframe{
+        margin: 0 auto;
+        width:  350px;
+        height: 250px;
+    }
+}
+.sns_container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.sns_pack{
+    display: flex;
+    list-style:none;
+}
+.sns_pack li{
+    margin-top: 30px;
+}
+.sns_pack img:hover{
+    scale: 1.2;
+    transition: 0.3s;
+}
+.hide{
+    display: none;
+}
