@@ -1,4 +1,4 @@
-# LP_tml_PHP
+# LP_tmp_PHP
 
 ### 1．プロダクトについて
 
